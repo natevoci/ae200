@@ -201,10 +201,15 @@ class AE200Climate(ClimateEntity):
     def __init__(self, hass, device: AE200Device, controllerid: str):
         self._device = device
         self.entity_id = generate_entity_id("climate.{}", f"mitsubishi_ae_200_{controllerid}_{device.getName()}", None, hass)
+        self._unique_id = self.entity_id  # <-- Store it as the unique ID
         
         self._fan_modes = ['AUTO', 'LOW', 'MID2', 'MID1', 'HIGH']
 
         self._enable_turn_on_off_backwards_compatibility = False
+
+    @property
+    def unique_id(self):
+        return self._unique_id
         
     @property
     def supported_features(self):
