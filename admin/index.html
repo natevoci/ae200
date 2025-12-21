@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../../lib/js/adapter-settings.js"></script>
+    <script type="text/javascript">
+        // This adapter uses JsonConfig, redirect to it
+        if (typeof window.top.loadAdminAdapter === 'function') {
+            window.top.loadAdminAdapter('mitsubishi-ae200', 'json');
+        }
+    </script>
+</head>
+<body>
+    <p>This adapter uses JSON Config. If you see this page, please update your Admin adapter.</p>
+</body>
+</html>
