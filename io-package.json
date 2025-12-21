@@ -1,0 +1,86 @@
+{
+  "common": {
+    "name": "mitsubishi-ae200",
+    "version": "1.0.0",
+    "news": {
+      "1.0.0": {
+        "en": "Initial release",
+        "de": "Erstveröffentlichung"
+      }
+    },
+    "title": "Mitsubishi AE-200",
+    "titleLang": {
+      "en": "Mitsubishi AE-200 HVAC",
+      "de": "Mitsubishi AE-200 Klimaanlage"
+    },
+    "desc": {
+      "en": "Control Mitsubishi AE-200 HVAC systems",
+      "de": "Steuerung von Mitsubishi AE-200 Klimaanlagen"
+    },
+    "authors": [
+      "Your Name <your@email.com>"
+    ],
+    "keywords": [
+      "mitsubishi",
+      "ae200",
+      "hvac",
+      "climate",
+      "air conditioning"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "build/main.js",
+    "icon": "ae200.svg",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/your-repo/ioBroker.mitsubishi-ae200/main/admin/ae200.png",
+    "readme": "https://github.com/your-repo/ioBroker.mitsubishi-ae200/blob/main/README.md",
+    "loglevel": "info",
+    "tier": 3,
+    "mode": "daemon",
+    "type": "climate-control",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=5.0.0"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=6.0.0"
+      }
+    ]
+  },
+  "native": {
+    "ipAddress": "",
+    "pollingInterval": 30
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Device connection status",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}

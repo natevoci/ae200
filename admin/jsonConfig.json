@@ -1,0 +1,77 @@
+{
+  "i18n": true,
+  "type": "panel",
+  "items": {
+    "connection": {
+      "type": "panel",
+      "label": {
+        "en": "Connection Settings",
+        "de": "Verbindungseinstellungen"
+      },
+      "items": {
+        "ipAddress": {
+          "type": "text",
+          "label": {
+            "en": "IP Address",
+            "de": "IP-Adresse"
+          },
+          "help": {
+            "en": "IP address of your Mitsubishi AE-200 controller (e.g., 192.168.1.100)",
+            "de": "IP-Adresse Ihres Mitsubishi AE-200 Controllers (z.B. 192.168.1.100)"
+          },
+          "placeholder": "192.168.1.100",
+          "sm": 12,
+          "md": 6,
+          "lg": 4
+        },
+        "pollingInterval": {
+          "type": "number",
+          "label": {
+            "en": "Polling Interval (seconds)",
+            "de": "Abfrageintervall (Sekunden)"
+          },
+          "help": {
+            "en": "How often to poll the AE-200 for status updates (minimum 10 seconds)",
+            "de": "Wie oft der AE-200 nach Statusaktualisierungen abgefragt wird (mindestens 10 Sekunden)"
+          },
+          "default": 30,
+          "min": 10,
+          "max": 3600,
+          "sm": 12,
+          "md": 6,
+          "lg": 4
+        }
+      }
+    },
+    "info": {
+      "type": "panel",
+      "label": {
+        "en": "Information",
+        "de": "Information"
+      },
+      "items": {
+        "_infoText": {
+          "type": "staticText",
+          "text": {
+            "en": "This adapter connects to Mitsubishi AE-200 HVAC controllers via WebSocket. Devices are automatically discovered on adapter start.",
+            "de": "Dieser Adapter verbindet sich über WebSocket mit Mitsubishi AE-200 Klimacontrollern. Geräte werden beim Adapterstart automatisch erkannt."
+          },
+          "style": {
+            "fontSize": 14
+          }
+        },
+        "_features": {
+          "type": "staticText",
+          "text": {
+            "en": "Supported features:\n• Power on/off\n• Temperature control\n• Mode selection (Heat, Cool, Dry, Fan, Auto)\n• Fan speed control\n• Current temperature monitoring\n• Humidity monitoring (if available)\n• Filter & error status indicators",
+            "de": "Unterstützte Funktionen:\n• Ein-/Ausschalten\n• Temperaturregelung\n• Modusauswahl (Heizen, Kühlen, Entfeuchten, Lüfter, Auto)\n• Lüftergeschwindigkeit\n• Aktuelle Temperatur\n• Luftfeuchtigkeit (falls verfügbar)\n• Filter- und Fehlerstatus"
+          },
+          "style": {
+            "fontSize": 12,
+            "whiteSpace": "pre-line"
+          }
+        }
+      }
+    }
+  }
+}
